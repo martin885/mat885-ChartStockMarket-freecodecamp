@@ -1,0 +1,16 @@
+#chart{
+    height:400px;
+    min-width:310px;
+}
+
+#stock-btns > li.list-group-item button,a{
+margin-top:-5px;
+}
+
+.alert{
+    display:none;
+}
+
+form label{
+    padding-right:5px;
+}

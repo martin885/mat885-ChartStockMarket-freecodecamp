@@ -1,0 +1,25 @@
+{
+  "name": "mat885-chartstockmarket-freecodecamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martin885/mat885-ChartStockMarket-freecodecamp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martin885/mat885-ChartStockMarket-freecodecamp/issues"
+  },
+  "homepage": "https://github.com/martin885/mat885-ChartStockMarket-freecodecamp#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4",
+    "socket.io": "^2.0.4",
+    "yahoo-finance": "^0.3.5"
+  }
+}
