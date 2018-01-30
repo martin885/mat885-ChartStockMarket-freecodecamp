@@ -3,7 +3,7 @@ const express =require('express');
 const path=require('path');
 const stocks=require('./stocks');
 const sockets=require('./sockets');
-const port=8080;
+const port=process.env.PORT || 8080;
 
 
 
