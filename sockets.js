@@ -1,7 +1,8 @@
 const socketIo = require('socket.io');
 const stocksController = require('./stocks');
+const Symbols = require('./models/symbols.js')
 
-module.exports = function Io (server) {
+module.exports = function Io(server) {
     const io = socketIo(server);
     io.on('connection', function (socket) {
         console.log('user connected');

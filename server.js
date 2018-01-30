@@ -4,10 +4,27 @@ const path=require('path');
 const stocks=require('./stocks');
 const sockets=require('./sockets');
 const port=process.env.PORT || 8080;
+const mongoose = require('mongoose');
+var dburl = process.env.MONGOURI || 'mongodb://localhost/freecodecampchartstockmarket';
 
 
 
+mongoose.connect(dburl , function (err) {
+    if (err) {
+        console.log(err);
+    }
+});
 
+mongoose.connection.on('connected', function () {
+    console.log('Connected');
+});
+
+mongoose.connection.on('disconnected', function () {
+    console.log('Disconnected');
+})
+mongoose.connection.on('error', function () {
+    console.log('An has occurred');
+});
 
 const app=express();
 const server= http.Server(app);

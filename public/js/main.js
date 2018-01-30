@@ -12,7 +12,10 @@ function updateRemoveButtons(stocks) {
     $stockBtns.find('li').remove();
 
     $.each(stocks, function (index, stock) {
+
         const $li = $('<li/>', { class: 'list-group-item' });
+
+
 
 
         const $p = $('<h3/>', {
@@ -23,30 +26,27 @@ function updateRemoveButtons(stocks) {
             class: 'pull-right',
             html: '<button class="btn btn-danger">&times;</button>',
         });
-        $button.click(function(){
-            socket.emit('remove stock',stock.name);
+        $button.click(function () {
+            socket.emit('remove stock', stock.name);
             return false;
         });
         $li.append($button).append($p).prependTo($stockBtns);
     });
-
-
 }
 
-$(function(){
+$(function () {
     $('#message').hide();
-
-    $('form').submit(function(){
-        socket.emit('add stock',$('#symbol').val());
+    $('form').submit(function () {
+        socket.emit('add stock', $('#symbol').val());
         $('#symbol').val('');
         $('#message').hide();
         return false;
     });
-socket.on('not found',function(symbol){
-    $('#message').text(`there is no symbol: ${symbol}`);
-    $('#message').show();
-});
+    socket.on('not found', function (symbol) {
+        $('#message').text(`there is no symbol: ${symbol}`);
+        $('#message').show();
+    });
 
-socket.on('stocks changed',updateChart);
-socket.on('stocks changed',updateRemoveButtons);
+    socket.on('stocks changed', updateChart);
+    socket.on('stocks changed', updateRemoveButtons);
 });

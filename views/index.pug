@@ -10,20 +10,20 @@ html(lang="en")
         script(
             src='https://code.jquery.com/jquery-3.2.1.min.js'
             integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
-            crossorigin='anonymous'
-        )
+            crossorigin='anonymous')
         script(src="https://code.highcharts.com/stock/highstock.js")
         script(src='https://code.highcharts.com/stock/modules/exporting.js')
         script(src='/socket.io/socket.io.js')
         script(src='/static/js/main.js')
         script(src='/static/js/chart.js')
+        
     body
-      h1.text-center Stock Market
-      #chart
-      form.text-center(action='')
-        label(for='symbol' ) Enter Stock Symbol:
-        input(id='symbol' autocomplete='off' required)
-        button(class='btn btn-primary') Add Stock
-        #message.alert.alert-warning
-      #remove-stocks 
-        ul#stock-btns.list-group
+        h1.text-center Stock Market
+        #chart
+        form.text-center(action='')
+            label(for='symbol' ) Enter Stock Symbol:
+            input(id='symbol' autocomplete='off' required)
+            button(class='btn btn-primary') Add Stock
+            #message.alert.alert-warning
+        #remove-stocks 
+            ul#stock-btns.list-group
