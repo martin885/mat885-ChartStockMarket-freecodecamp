@@ -1,6 +1,5 @@
 const socketIo = require('socket.io');
 const stocksController = require('./stocks');
-const Symbols = require('./models/symbols.js')
 
 module.exports = function Io(server) {
     const io = socketIo(server);

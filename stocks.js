@@ -1,5 +1,4 @@
 const yahooFinance = require('yahoo-finance');
-const Symbols = require('./models/symbols.js');
 
 const stocks = [];
 
